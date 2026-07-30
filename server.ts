@@ -987,9 +987,16 @@ async function startServer() {
     });
   }
 
+// ... (тут конец функции startServer)
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://0.0.0.0:${PORT}`);
   });
 }
 
-startServer();
+// Запускаем сервер локально, если мы не в рабочей среде Vercel
+if (process.env.NODE_ENV !== "production") {
+  startServer();
+}
+
+// Экспортируем app для Vercel
+export default app;
