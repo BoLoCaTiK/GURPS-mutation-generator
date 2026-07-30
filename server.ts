@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
+
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 
@@ -974,6 +974,7 @@ CRITICAL DIRECTIVES:
 // Serve frontend assets and start listening wrapped in async function to avoid top-level await
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite"); // <-- ДОБАВЛЕНА ЭТА СТРОКА
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
