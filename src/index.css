@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom colors matching XenoGen Bio-assessment theme */
+  --color-toxic-50: #f0fdf4;
+  --color-toxic-100: #dcfce7;
+  --color-toxic-200: #bbf7d0;
+  --color-toxic-300: #86efac;
+  --color-toxic-400: #4ade80;
+  --color-toxic-500: #10b981;
+  --color-toxic-600: #059669;
+  --color-toxic-700: #047857;
+  --color-toxic-800: #065f46;
+  --color-toxic-900: #064e3b;
+  
+  --color-mutant-950: #05070a;
+  --color-mutant-900: #0d141f;
+  --color-mutant-800: #1a2c38;
+  --color-mutant-700: #253f50;
+  --color-mutant-600: #30536a;
+  --color-mutant-500: #10b981;
+  --color-mutant-400: #34d399;
+}
+
+body {
+  background-color: #05070a;
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2c38;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "БашМанаМут",
+  "description": "Генератор уникальных случайных мутаций по системе GURPS 4th Edition с расчетом преимуществ, недостатков, модификаторов и очков.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
